@@ -1,0 +1,6 @@
+# Ignore everything except repository-related files by default,
+# as unconfigured apps may also be storing data in ~/.config.
+*
+!.gitignore
+!LICENSE
+!README.md
