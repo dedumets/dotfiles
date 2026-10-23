@@ -10,3 +10,8 @@
 
 !/ghostty/
 !/ghostty/**
+
+!/tmux/
+!/tmux/**
+/tmux/plugins/**
+/tmux/plugins/tpm/
