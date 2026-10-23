@@ -1,0 +1,28 @@
+# Use Tmux for most features of the default keymap.
+#keybind = clear
+
+keybind = super+shift+,=reload_config
+
+keybind = super+f=start_search
+keybind = performable:escape=end_search
+keybind = performable:super+g=navigate_search:next
+keybind = performable:super+shift+g=navigate_search:previous
+
+keybind = super+backspace=text:\\x15
+keybind = super+arrow_left=text:\\x01
+keybind = super+arrow_right=text:\\x05
+keybind = super+arrow_up=jump_to_prompt:-1
+
+keybind = super+a=select_all
+keybind = shift+end=adjust_selection:end
+keybind = shift+home=adjust_selection:home
+keybind = shift+page_down=adjust_selection:page_down
+keybind = shift+page_up=adjust_selection:page_up
+keybind = shift+arrow_down=adjust_selection:down
+keybind = shift+arrow_left=adjust_selection:left
+keybind = shift+arrow_right=adjust_selection:right
+keybind = shift+arrow_up=adjust_selection:up
+
+keybind = super+c=copy_to_clipboard:mixed
+keybind = copy=copy_to_clipboard:mixed
+keybind = paste=paste_from_clipboard
