@@ -5,8 +5,12 @@
 !LICENSE
 !README.md
 
-!.zshrc
 !starship.toml
+
+!.zshrc
+!/zsh/
+!/zsh/**
+/zsh/environment.sh
 
 !/ghostty/
 !/ghostty/**
