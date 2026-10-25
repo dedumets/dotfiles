@@ -7,4 +7,5 @@ return vim.tbl_extend("force", base, {
 		"ruff_format",
 		"ruff_organize_imports",
 	},
+	typescript = { "prettierd" },
 })
