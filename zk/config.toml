@@ -1,0 +1,58 @@
+[notebook]
+dir = "~/Zettelkasten"
+
+[note]
+template = "personal.md"
+filename = "{{id}}-{{slug title}}"
+
+[group.work.note]
+template = "work.md"
+
+[group.resolutions.note]
+template = "resolutions.md"
+filename = "{{format-date now \"year\"}}"
+
+[group.resolution]
+paths = ["resolutions"]
+
+[group.resolution.note]
+template = "resolution.md"
+filename = "{{format-date now \"year\"}}-{{slug title}}"
+
+[format.markdown]
+link-format = "wiki"
+hashtags = true
+colon-tags = false
+multiword-tags = false
+
+[format.markdown.frontmatter]
+creation-date-key = "created"
+modification-date-key = "updated"
+
+[tool]
+fzf-preview = "bat -p --color always {-1}"
+
+[lsp.diagnostics]
+dead-link = "error"
+self-link = "warning"
+
+[filter]
+root = "--tag \"root\""
+nroot = "--tag \"NOT root\""
+recents = "--sort created- --created-after 'last two weeks'"
+
+[alias]
+# Create a new personal note.
+personal = "zk new \"$ZK_NOTEBOOK_DIR/personal\" $@"
+# Create a new work note.
+work = "zk new \"$ZK_NOTEBOOK_DIR/work\" $@"
+# Edit a random note.
+lucky = "zk list --quiet --format full --sort random --limit 1"
+# Edit the last modified note.
+last = "zk edit --limit 1 --sort modified- $@"
+# Interactively pick to edit a note created in the last two weeks.
+recent = "zk edit --sort created- --created-after 'last two weeks' --interactive"
+# Create or edit this year's resolution root note.
+resolutions = "zk new --no-input --group resolutions \"$ZK_NOTEBOOK_DIR/resolutions\""
+# Create a new New Year's Resolution note.
+resolution = "zk new --group resolution \"$ZK_NOTEBOOK_DIR/resolutions\" $@"
