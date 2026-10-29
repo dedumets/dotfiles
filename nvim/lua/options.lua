@@ -2,13 +2,16 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- Add visual columns for long lines
+vim.opt.colorcolumn = "80,120"
+
+-- Use two sign columns for gitsigns
+vim.opt.signcolumn = "yes:2"
+
 -- Sync clipboard between OS and Neovim
 vim.schedule(function()
 	vim.opt.clipboard = "unnamedplus"
 end)
-
--- Add visual columns for long lines
-vim.opt.colorcolumn = "80,120"
 
 -- Save undo history
 vim.opt.undofile = true
@@ -23,9 +26,6 @@ vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 vim.opt.smarttab = true
-
--- Use two sign columns for gitsigns
-vim.opt.signcolumn = "yes:2"
 
 -- Speed up flows
 vim.opt.updatetime = 250
@@ -47,3 +47,6 @@ vim.opt.scrolloff = 10
 
 -- Allow whitespace selection in block mode
 vim.opt.virtualedit = "block"
+
+-- Hide command line until commands are relevant
+vim.opt.cmdheight = 0
