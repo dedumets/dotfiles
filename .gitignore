@@ -12,6 +12,9 @@
 !/zsh/**
 /zsh/environment.sh
 
+!/aerospace
+!/aerospace/**
+
 !/ghostty/
 !/ghostty/**
 
