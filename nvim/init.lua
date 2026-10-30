@@ -21,7 +21,6 @@ require("global")
 require("options")
 require("autocommands")
 require("keymaps")
-require("statusline")
 
 -- Setup lazy.nvim
 require("lazy").setup({
