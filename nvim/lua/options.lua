@@ -5,8 +5,8 @@ vim.opt.relativenumber = true
 -- Add visual columns for long lines
 vim.opt.colorcolumn = "80,120"
 
--- Use two sign columns for gitsigns
-vim.opt.signcolumn = "yes:2"
+-- Use a sign column for gitsigns
+vim.opt.signcolumn = "yes:1"
 
 -- Sync clipboard between OS and Neovim
 vim.schedule(function()
