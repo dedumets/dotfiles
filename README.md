@@ -11,23 +11,18 @@ My personal development configuration built around the terminal.
 
 ## Setup
 
-Most dependencies are installed via [Homebrew](https://brew.sh/):
+Install [Homebrew](https://brew.sh/) dependencies:
 
 ```sh
-brew install bat
-brew install delta
-brew install eza
-brew install fzf
-brew install neovim
-brew install ripgrep
-brew install starship
-brew install tmux
-brew install zoxide
-brew install zk
-brew install --cask ghostty
-brew install --cask nikitabobko/tap/aerospace
+brew install bat delta eza fzf neovim ripgrep starship tmux tree-sitter-cli zoxide zk
+brew install --cask ghostty nikitabobko/tap/aerospace
+# To replace Xcode with Neovim
+brew install xcode-build-server xcp xcbeautify
 ```
 
-Unfortunately, some apps must be installed through a GUI:
+Most of these should work right away, after cloning the repository into `~/.config`,
+and sym-linking `.zshrc` to `~/.zshrc`.
+
+Some apps must be installed and configured through a GUI:
 
 - [SaneScroll](https://github.com/dyarfaradj/SaneScroll)
